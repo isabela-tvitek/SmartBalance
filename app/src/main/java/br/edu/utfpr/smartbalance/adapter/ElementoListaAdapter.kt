@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
 import br.edu.utfpr.smartbalance.R
 import br.edu.utfpr.smartbalance.database.DatabaseHandler.Companion.ID
@@ -42,17 +43,26 @@ class ElementoListaAdapter (val context : Context, val cursor : Cursor) : BaseAd
         val inflater = context.getSystemService( Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val v = inflater.inflate( R.layout.elemento_lista, null )
 
-        val ivTipoElementoLista = v.findViewById<TextView>( R.id.ivTipoElementoLista )
+        val ivTipoElementoLista = v.findViewById<ImageView>( R.id.ivTipoElementoLista )
         val tvDataElementoLista = v.findViewById<TextView>( R.id.tvDataElementoLista )
         val tvDetalheElementoLista = v.findViewById<TextView>( R.id.tvDetalheElementoLista )
         val tvValorElementoLista = v.findViewById<TextView>( R.id.tvValorElementoLista )
 
         cursor.moveToPosition( position )
 
-        ivTipoElementoLista.setText( cursor.getString( TIPO ) )
+        val tipo = cursor.getString(TIPO)
         tvDetalheElementoLista.setText( cursor.getString( DETALHE ) )
         tvValorElementoLista.setText( cursor.getString( VALOR ) )
         tvDataElementoLista.setText( cursor.getString( DATA ) )
+
+        if (tipo == "c") {
+            ivTipoElementoLista.setColorFilter(context.getColor(R.color.green))
+        } else if (tipo == "d") {
+            ivTipoElementoLista.setColorFilter(context.getColor(R.color.red))
+        } else {
+            // Se quiser adicionar uma cor padrão para outros valores
+            ivTipoElementoLista.setColorFilter(context.getColor(R.color.black))
+        }
 
         return v
     }

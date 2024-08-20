@@ -5,24 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<!--    <ImageView-->
-<!--        android:id="@+id/ivTipoElementoLista"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="16dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/tvDataElementoLista"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/tvDataElementoLista"-->
-<!--        app:srcCompat="@drawable/ic_circle" />-->
-
-    <TextView
+    <ImageView
         android:id="@+id/ivTipoElementoLista"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="tipo"
+        app:tint="@color/green"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDataElementoLista"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvDataElementoLista" />
+        app:layout_constraintTop_toTopOf="@+id/tvDataElementoLista"
+        app:srcCompat="@drawable/ic_circle" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/ivTipoElementoLista"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:text="tipo"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/tvDataElementoLista" />-->
 
     <TextView
         android:id="@+id/tvDetalheElementoLista"
