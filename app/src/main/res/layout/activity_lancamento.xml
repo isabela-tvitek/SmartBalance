@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".LancamentoActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registre_sua_movimentacao"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTipo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTipo"
+        app:srcCompat="@drawable/ic_list_24"
+        app:tint="@color/blue"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/tipo"
+        app:layout_constraintBottom_toBottomOf="@+id/etTipo"
+        app:layout_constraintStart_toEndOf="@id/ivTipo"
+        app:layout_constraintTop_toTopOf="@+id/etTipo" />
+
+    <EditText
+        android:id="@+id/etTipo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:hint="@string/cr_dito"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textColorHint="#795548"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvTipo"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <ImageView
+        android:id="@+id/ivDetalhe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:tint="@color/purple"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDetalhe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDetalhe"
+        app:srcCompat="@drawable/ic_details" />
+
+    <TextView
+        android:id="@+id/tvDetalhe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/detalhe"
+        app:layout_constraintBottom_toBottomOf="@+id/etDetalhe"
+        app:layout_constraintStart_toEndOf="@id/ivDetalhe"
+        app:layout_constraintTop_toTopOf="@+id/etDetalhe" />
+
+    <EditText
+        android:id="@+id/etDetalhe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/sal_rio"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textColorHint="#795548"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvDetalhe"
+        app:layout_constraintTop_toBottomOf="@+id/etTipo"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <ImageView
+        android:id="@+id/ivValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@+id/tvValor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvValor"
+        app:srcCompat="@drawable/ic_money"
+        app:tint="@color/yellow"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/valor"
+        app:layout_constraintBottom_toBottomOf="@+id/etValor"
+        app:layout_constraintStart_toEndOf="@id/ivValor"
+        app:layout_constraintTop_toTopOf="@+id/etValor" />
+
+    <EditText
+        android:id="@+id/etValor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/_0_0"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textColorHint="#795548"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvValor"
+        app:layout_constraintTop_toBottomOf="@+id/etDetalhe"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <ImageView
+        android:id="@+id/ivData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@+id/tvData"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvData"
+        app:srcCompat="@drawable/ic_calendar"
+        app:tint="@color/green2"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/tvData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/data_lan"
+        app:layout_constraintBottom_toBottomOf="@+id/etData"
+        app:layout_constraintStart_toEndOf="@id/ivData"
+        app:layout_constraintTop_toTopOf="@+id/etData" />
+
+    <EditText
+        android:id="@+id/etData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/_01_01_2024"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:textColorHint="#795548"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/tvData"
+        app:layout_constraintTop_toBottomOf="@+id/etValor"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <ImageButton
+        android:id="@+id/ivSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:importantForAccessibility="no"
+        android:onClick="btIncluirOnClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etData"
+        app:srcCompat="@drawable/ic_save"
+        app:tint="@color/green"
+        tools:ignore="TouchTargetSizeCheck,ImageContrastCheck" />
+
+    <Button
+        android:id="@+id/btSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/saldo"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btHistorico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="?attr/colorSecondary"
+        android:hapticFeedbackEnabled="false"
+        android:text="@string/hist_rico"
+        android:textColor="#424242"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btSaldo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

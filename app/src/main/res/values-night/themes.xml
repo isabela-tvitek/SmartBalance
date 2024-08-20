@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.FuelFinder" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorSecondaryVariant">@color/green</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:background">@color/background</item>
+        <item name="android:textColor">@color/text_primary_night</item>
+    </style>
+    <style name="Theme.FuelFinder" parent="Base.Theme.FuelFinder" />
+</resources>

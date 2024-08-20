@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivTipoElementoLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDataElementoLista"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvDataElementoLista"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <TextView
+        android:id="@+id/tvDetalheElementoLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Sálario"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDataElementoLista"
+        app:layout_constraintStart_toEndOf="@+id/tvDataElementoLista"
+        app:layout_constraintTop_toTopOf="@+id/tvDataElementoLista" />
+
+    <TextView
+        android:id="@+id/tvDataElementoLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="01/01/2024"
+        app:layout_constraintStart_toEndOf="@+id/ivTipoElementoLista"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvValorElementoLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="2.800,00"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDetalheElementoLista"
+        app:layout_constraintStart_toEndOf="@+id/tvDetalheElementoLista"
+        app:layout_constraintTop_toTopOf="@+id/tvDetalheElementoLista" />
+</androidx.constraintlayout.widget.ConstraintLayout>

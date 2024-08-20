@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SmartBalance</string>
+    <string name="registre_sua_movimentacao">Registre sua Movimentação</string>
+    <string name="tipo">Tipo:</string>
+    <string name="cr_dito">Crédito</string>
+    <string name="detalhe">Detalhe:</string>
+    <string name="sal_rio">Salário</string>
+    <string name="valor">Valor:</string>
+    <string name="data_lan">Data Lanç.:</string>
+    <string name="_0_0">0.0</string>
+    <string name="_01_01_2024">01/01/2024</string>
+    <string name="saldo">Saldo</string>
+    <string name="hist_rico">Histórico</string>
+</resources>
