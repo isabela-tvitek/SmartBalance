@@ -23,11 +23,11 @@ class DatabaseHandler (context : Context) : SQLiteOpenHelper ( context, DATABASE
         private const val DATABASE_NAME = "dbfile.sqlite"
         private const val DATABASE_VERSION = 4
         private const val TABLE_NAME = "movimentacao"
-        public const val ID = 0
-        public const val TIPO = 1
-        public const val DETALHE = 2
-        public const val VALOR = 3
-        public const val DATA = 4
+        const val ID = 0
+        const val TIPO = 1
+        const val DETALHE = 2
+        const val VALOR = 3
+        const val DATA = 4
     }
 
     fun insert( movimentacao: Movimentacao) {
@@ -56,7 +56,6 @@ class DatabaseHandler (context : Context) : SQLiteOpenHelper ( context, DATABASE
 
     fun delete( id : Int ) {
         val db = this.writableDatabase
-
         db.delete( TABLE_NAME, "_id=${id}", null )
     }
 
@@ -101,7 +100,6 @@ class DatabaseHandler (context : Context) : SQLiteOpenHelper ( context, DATABASE
         var registros = mutableListOf<Movimentacao>()
 
         while ( registro.moveToNext() ) {
-
             val cadastro = Movimentacao(
                 registro.getInt( ID ),
                 registro.getString( TIPO ),
@@ -112,7 +110,6 @@ class DatabaseHandler (context : Context) : SQLiteOpenHelper ( context, DATABASE
             registros.add( cadastro )
         }
         return registros
-
     }
 
     fun listCursor() : Cursor {

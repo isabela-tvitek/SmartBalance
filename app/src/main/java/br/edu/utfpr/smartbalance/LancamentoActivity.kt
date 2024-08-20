@@ -1,5 +1,6 @@
 package br.edu.utfpr.smartbalance
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
@@ -42,5 +43,14 @@ class LancamentoActivity : AppCompatActivity() {
         banco.insert( cadastro )
 
         Toast.makeText( this, "Sucesso!", Toast.LENGTH_LONG ).show()
+    }
+
+    fun btHistoricoOnClick(view: View) {
+        val intent = Intent( this, HistoricoActivity::class.java )
+        startActivity( intent )
+    }
+
+    fun btSaldoOnClick(view: View) {
+        Toast.makeText( this, "O saldo é xxx!", Toast.LENGTH_LONG ).show()
     }
 }

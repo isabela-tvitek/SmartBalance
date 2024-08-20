@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SmartBalance"
         tools:targetApi="31">
         <activity
+            android:name=".HistoricoActivity"
+            android:exported="false" />
+        <activity
             android:name=".LancamentoActivity"
             android:exported="false" />
         <activity

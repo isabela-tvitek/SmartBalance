@@ -195,6 +195,7 @@
         android:layout_marginBottom="32dp"
         android:text="@string/saldo"
         android:textColor="#000000"
+        android:onClick="btSaldoOnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -208,6 +209,7 @@
         android:hapticFeedbackEnabled="false"
         android:text="@string/hist_rico"
         android:textColor="#424242"
+        android:onClick="btHistoricoOnClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btSaldo" />
 
