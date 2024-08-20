@@ -49,7 +49,7 @@ class ElementoListaAdapter (val context : Context, val cursor : Cursor) : BaseAd
 
         cursor.moveToPosition( position )
 
-//        ivTipoElementoLista.setText( cursor.getString( TIPO ) )
+        ivTipoElementoLista.setText( cursor.getString( TIPO ) )
         tvDetalheElementoLista.setText( cursor.getString( DETALHE ) )
         tvValorElementoLista.setText( cursor.getString( VALOR ) )
         tvDataElementoLista.setText( cursor.getString( DATA ) )
