@@ -1,14 +1,18 @@
 package br.edu.utfpr.smartbalance.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.database.Cursor
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import br.edu.utfpr.smartbalance.LancamentoActivity
 import br.edu.utfpr.smartbalance.R
+import br.edu.utfpr.smartbalance.database.DatabaseHandler
 import br.edu.utfpr.smartbalance.database.DatabaseHandler.Companion.ID
 import br.edu.utfpr.smartbalance.database.DatabaseHandler.Companion.TIPO
 import br.edu.utfpr.smartbalance.database.DatabaseHandler.Companion.DETALHE
@@ -18,6 +22,7 @@ import br.edu.utfpr.smartbalance.entity.Movimentacao
 
 class ElementoListaAdapter (val context : Context, val cursor : Cursor) : BaseAdapter() {
 
+    private val banco = DatabaseHandler(context)
     override fun getCount(): Int {
         return cursor.count
     }
@@ -47,6 +52,7 @@ class ElementoListaAdapter (val context : Context, val cursor : Cursor) : BaseAd
         val tvDataElementoLista = v.findViewById<TextView>( R.id.tvDataElementoLista )
         val tvDetalheElementoLista = v.findViewById<TextView>( R.id.tvDetalheElementoLista )
         val tvValorElementoLista = v.findViewById<TextView>( R.id.tvValorElementoLista )
+        val btnDelete = v.findViewById<ImageButton>(R.id.btnDelete)
 
         cursor.moveToPosition( position )
 
@@ -62,6 +68,14 @@ class ElementoListaAdapter (val context : Context, val cursor : Cursor) : BaseAd
         } else {
             // Se quiser adicionar uma cor padrão para outros valores
             ivTipoElementoLista.setColorFilter(context.getColor(R.color.black))
+        }
+
+        val id = cursor.getInt(ID)
+        btnDelete.setOnClickListener {
+            banco.delete(id)
+            val intent = Intent(context, LancamentoActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            context.startActivity(intent)
         }
 
         return v

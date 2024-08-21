@@ -36,26 +36,38 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="@string/tipo"
-        app:layout_constraintBottom_toBottomOf="@+id/etTipo"
+        app:layout_constraintBottom_toBottomOf="@+id/spTipo"
         app:layout_constraintStart_toEndOf="@id/ivTipo"
-        app:layout_constraintTop_toTopOf="@+id/etTipo" />
+        app:layout_constraintTop_toTopOf="@+id/spTipo" />
 
-    <EditText
-        android:id="@+id/etTipo"
+<!--    <EditText-->
+<!--        android:id="@+id/etTipo"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:hint="@string/cr_dito"-->
+<!--        android:importantForAutofill="no"-->
+<!--        android:inputType="text"-->
+<!--        android:minHeight="48dp"-->
+<!--        android:padding="8dp"-->
+<!--        android:textColorHint="#795548"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@id/tvTipo"-->
+<!--        app:layout_constraintTop_toTopOf="@id/tvTitle"-->
+<!--        tools:ignore="VisualLintTextFieldSize" />-->
+
+    <Spinner
+        android:id="@+id/spTipo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:hint="@string/cr_dito"
-        android:importantForAutofill="no"
-        android:inputType="text"
+        android:layout_marginTop="16dp"
         android:minHeight="48dp"
-        android:padding="8dp"
-        android:textColorHint="#795548"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvTipo"
-        app:layout_constraintTop_toTopOf="@id/tvTitle"
-        tools:ignore="VisualLintTextFieldSize" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
 
     <ImageView
         android:id="@+id/ivDetalhe"
@@ -74,26 +86,37 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:text="@string/detalhe"
-        app:layout_constraintBottom_toBottomOf="@+id/etDetalhe"
+        app:layout_constraintBottom_toBottomOf="@+id/spDetalhe"
         app:layout_constraintStart_toEndOf="@id/ivDetalhe"
-        app:layout_constraintTop_toTopOf="@+id/etDetalhe" />
+        app:layout_constraintTop_toTopOf="@+id/spDetalhe" />
 
-    <EditText
-        android:id="@+id/etDetalhe"
+<!--    <EditText-->
+<!--        android:id="@+id/etDetalhe"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:hint="@string/sal_rio"-->
+<!--        android:importantForAutofill="no"-->
+<!--        android:inputType="text"-->
+<!--        android:minHeight="48dp"-->
+<!--        android:padding="8dp"-->
+<!--        android:textColorHint="#795548"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toEndOf="@id/tvDetalhe"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/spTipo"-->
+<!--        tools:ignore="VisualLintTextFieldSize" />-->
+
+    <Spinner
+        android:id="@+id/spDetalhe"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:hint="@string/sal_rio"
-        android:importantForAutofill="no"
-        android:inputType="text"
         android:minHeight="48dp"
-        android:padding="8dp"
-        android:textColorHint="#795548"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvDetalhe"
-        app:layout_constraintTop_toBottomOf="@+id/etTipo"
-        tools:ignore="VisualLintTextFieldSize" />
+        app:layout_constraintTop_toBottomOf="@+id/spTipo" />
 
     <ImageView
         android:id="@+id/ivValor"
@@ -131,7 +154,7 @@
         android:textColorHint="#795548"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvValor"
-        app:layout_constraintTop_toBottomOf="@+id/etDetalhe"
+        app:layout_constraintTop_toBottomOf="@+id/spDetalhe"
         tools:ignore="VisualLintTextFieldSize" />
 
     <ImageView
@@ -164,10 +187,12 @@
         android:layout_marginTop="16dp"
         android:hint="@string/_01_01_2024"
         android:importantForAutofill="no"
-        android:inputType="date"
         android:minHeight="48dp"
         android:padding="8dp"
         android:textColorHint="#795548"
+        android:inputType="date"
+        android:focusable="true"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/tvData"

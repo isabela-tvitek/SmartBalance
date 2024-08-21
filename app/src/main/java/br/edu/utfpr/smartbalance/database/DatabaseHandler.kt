@@ -125,4 +125,32 @@ class DatabaseHandler (context : Context) : SQLiteOpenHelper ( context, DATABASE
         )
         return registro
     }
+
+    fun calcularSaldo(): Float {
+        val db = this.writableDatabase
+
+        val columns = arrayOf(
+            "SUM(CASE WHEN $TABLE_NAME.tipo = 'c' THEN $TABLE_NAME.valor ELSE 0 END) AS totalCredito",
+            "SUM(CASE WHEN $TABLE_NAME.tipo = 'd' THEN $TABLE_NAME.valor ELSE 0 END) AS totalDebito"
+        )
+
+        val cursor = db.query(
+            TABLE_NAME,
+            columns,
+            null,
+            null,
+            null,
+            null,
+            null
+        )
+
+        var saldo = 0f
+        if (cursor.moveToFirst()) {
+            val totalCredito = cursor.getFloat(cursor.getColumnIndexOrThrow("totalCredito"))
+            val totalDebito = cursor.getFloat(cursor.getColumnIndexOrThrow("totalDebito"))
+            saldo = totalCredito - totalDebito
+        }
+        cursor.close()
+        return saldo
+    }
 }

@@ -16,15 +16,6 @@
         app:layout_constraintTop_toTopOf="@+id/tvDataElementoLista"
         app:srcCompat="@drawable/ic_circle" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/ivTipoElementoLista"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="16dp"-->
-<!--        android:text="tipo"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/tvDataElementoLista" />-->
-
     <TextView
         android:id="@+id/tvDetalheElementoLista"
         android:layout_width="wrap_content"
@@ -54,4 +45,17 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvDetalheElementoLista"
         app:layout_constraintStart_toEndOf="@+id/tvDetalheElementoLista"
         app:layout_constraintTop_toTopOf="@+id/tvDetalheElementoLista" />
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="deleta item"
+        app:layout_constraintBottom_toBottomOf="@+id/tvValorElementoLista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvValorElementoLista"
+        app:srcCompat="@drawable/ic_delete"
+        app:tint="@color/red" />
 </androidx.constraintlayout.widget.ConstraintLayout>
